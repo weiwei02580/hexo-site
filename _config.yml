@@ -9,7 +9,7 @@ description: ""
 keywords:
 author: 没得选喽
 language: zh-CN
-timezone: ""
+timezone: "Asia/Shanghai"
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -101,7 +101,6 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-# https://weiwei02580.github.io/hexo-site/
 deploy:
   type: git
   repository: https://github.com/weiwei02580/hexo-site.git
