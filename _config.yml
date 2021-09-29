@@ -105,4 +105,4 @@ theme: next
 deploy:
   type: git
   repository: https://github.com/weiwei02580/hexo-site.git
-  branch: master
+  branch: gh-pages
