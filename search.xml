@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Flutter蛋播所有插件</title>
+    <url>/hexo-site/2021/09/30/Flutter%E8%9B%8B%E6%92%AD%E6%89%80%E6%9C%89%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<p>Flutter 蛋播星球所有插件，人力搬运，后期会备注每个插件的作用<br>蛋播是我见过交互做的最好的 App</p>
+<span id="more"></span>
+
+<ul>
+<li>StackWalker</li>
+<li>_fe_analyzer_shared</li>
+<li>aFileChooser</li>
+<li>analyzer</li>
+<li>angle</li>
+<li>animated_text_kit</li>
+<li>args</li>
+<li>asn1lib</li>
+<li>async</li>
+<li>auth_header</li>
+<li>base</li>
+<li>boolean_selector</li>
+<li>boringssl</li>
+<li>bot_toast</li>
+<li>build</li>
+<li>build_config</li>
+<li>build_daemon</li>
+<li>build_resolvers</li>
+<li>build_runner</li>
+<li>build_runner_core</li>
+<li>built_value</li>
+<li>cached_network_image</li>
+<li>carousel_slider</li>
+<li>characters</li>
+<li>charcode</li>
+<li>checked_yaml</li>
+<li>cli_util</li>
+<li>clock</li>
+<li>code_builder</li>
+<li>collection</li>
+<li>colorama</li>
+<li>connectivity</li>
+<li>connectivity_for_web</li>
+<li>connectivity_macos</li>
+<li>connectivity_platform_interface</li>
+<li>convert</li>
+<li>crypto</li>
+<li>cupertino_icons</li>
+<li>curved_navigation_bar</li>
+<li>dan_video</li>
+<li>dart</li>
+<li>dart_des</li>
+<li>dart_style</li>
+<li>dartx</li>
+<li>device_info</li>
+<li>device_info_flatform_interface</li>
+<li>dio</li>
+<li>dio_http_cache</li>
+<li>double-conversion</li>
+<li>encrypt</li>
+<li>engine</li>
+<li>etc1</li>
+<li>extended_image</li>
+<li>extended_image_library</li>
+<li>fake_async</li>
+<li>ffi</li>
+<li>fijkplayer</li>
+<li>file</li>
+<li>files</li>
+<li>firebase</li>
+<li>firebase_analytics</li>
+<li>firebase_analytics_flatform_interface</li>
+<li>firebase_analytics_web</li>
+<li>firebase_core</li>
+<li>firebase_core_flatform_interface</li>
+<li>firebase_core_web</li>
+<li>firebase_crashlytics</li>
+<li>fixnum</li>
+<li>flutter</li>
+<li>flutter_app_upgrade</li>
+<li>flutter_blurhash</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Flutter</category>
+      </categories>
+      <tags>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Flutter基础</title>
+    <url>/hexo-site/2021/09/30/flutter%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<p>在 vscode 运行安卓项目时需注意各 sdk 的配置，在 android 根目录 <code>local.properties</code> 中修改各环境</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">org.gradle.java.home=C:\\Program Files\\Java\\jdk1.8.0_291</span><br><span class="line">sdk.dir=C:\\Users\\Administrator\\AppData\\Local\\Android\\sdk</span><br><span class="line">flutter.sdk=D:\\application\\flutter</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://dartpad.cn/">在线 dartpad</a></p>
+]]></content>
+      <categories>
+        <category>Flutter</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Flutter插件</title>
+    <url>/hexo-site/2021/09/30/flutter%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<p>国际站 <a href="https://pub.dev/">pub.dev</a><br>国内站 <a href="https://pub.flutter-io.cn/">pub.flutter-io.cn</a></p>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>添加插件的方法 <code>flutter pub add packageName</code> 或者修改 <code>pubspec.yaml</code> 后 <code>flutter packages get</code></p>
+<h4 id="flutter-screenutil-屏幕适配插件"><a href="#flutter-screenutil-屏幕适配插件" class="headerlink" title="flutter_screenutil 屏幕适配插件"></a>flutter_screenutil 屏幕适配插件</h4><h4 id="url-launcher-打电话，发邮件，访问-url"><a href="#url-launcher-打电话，发邮件，访问-url" class="headerlink" title="url_launcher 打电话，发邮件，访问 url"></a>url_launcher 打电话，发邮件，访问 url</h4><h4 id="card-swiper-轮播插件"><a href="#card-swiper-轮播插件" class="headerlink" title="card_swiper 轮播插件"></a>card_swiper 轮播插件</h4><h4 id="dio-网络请求"><a href="#dio-网络请求" class="headerlink" title="dio 网络请求"></a>dio 网络请求</h4><h4 id="get-状态管理"><a href="#get-状态管理" class="headerlink" title="get 状态管理"></a>get 状态管理</h4>]]></content>
+      <categories>
+        <category>Flutter</category>
+      </categories>
+      <tags>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+</search>

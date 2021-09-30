@@ -22,23 +22,28 @@
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"weiwei02580.github.io","root":"/hexo-site/","images":"/hexo-site/images","scheme":"Gemini","darkmode":true,"version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/hexo-site/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/hexo-site/js/config.js"></script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="没得选の小破站">
-<meta property="og:url" content="https://weiwei02580.github.io/hexo-site/archives/2021/09/index.html">
+<meta name="description" content="国际站 pub.dev国内站 pub.flutter-io.cn 插件添加插件的方法 flutter pub add packageName 或者修改 pubspec.yaml 后 flutter packages get flutter_screenutil 屏幕适配插件url_launcher 打电话，发邮件，访问 urlcard_swiper 轮播插件dio 网络请求get 状态管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flutter插件">
+<meta property="og:url" content="https://weiwei02580.github.io/hexo-site/2021/09/30/flutter%E6%8F%92%E4%BB%B6/index.html">
 <meta property="og:site_name" content="没得选の小破站">
+<meta property="og:description" content="国际站 pub.dev国内站 pub.flutter-io.cn 插件添加插件的方法 flutter pub add packageName 或者修改 pubspec.yaml 后 flutter packages get flutter_screenutil 屏幕适配插件url_launcher 打电话，发邮件，访问 urlcard_swiper 轮播插件dio 网络请求get 状态管理">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-30T02:03:13.000Z">
+<meta property="article:modified_time" content="2021-09-30T04:14:04.057Z">
 <meta property="article:author" content="没得选喽">
+<meta property="article:tag" content="插件">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://weiwei02580.github.io/hexo-site/archives/2021/09/">
+<link rel="canonical" href="https://weiwei02580.github.io/hexo-site/2021/09/30/flutter%E6%8F%92%E4%BB%B6/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2021/09/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weiwei02580.github.io/hexo-site/2021/09/30/flutter%E6%8F%92%E4%BB%B6/","path":"2021/09/30/flutter插件/","title":"Flutter插件"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | 没得选の小破站</title>
+<title>Flutter插件 | 没得选の小破站</title>
   
 
 
@@ -131,7 +136,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -144,6 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%92%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#flutter-screenutil-%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D%E6%8F%92%E4%BB%B6"><span class="nav-number">1.0.1.</span> <span class="nav-text">flutter_screenutil 屏幕适配插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#url-launcher-%E6%89%93%E7%94%B5%E8%AF%9D%EF%BC%8C%E5%8F%91%E9%82%AE%E4%BB%B6%EF%BC%8C%E8%AE%BF%E9%97%AE-url"><span class="nav-number">1.0.2.</span> <span class="nav-text">url_launcher 打电话，发邮件，访问 url</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#card-swiper-%E8%BD%AE%E6%92%AD%E6%8F%92%E4%BB%B6"><span class="nav-number">1.0.3.</span> <span class="nav-text">card_swiper 轮播插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dio-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82"><span class="nav-number">1.0.4.</span> <span class="nav-text">dio 网络请求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#get-%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86"><span class="nav-number">1.0.5.</span> <span class="nav-text">get 状态管理</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -205,89 +211,126 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 3 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weiwei02580.github.io/hexo-site/2021/09/30/flutter%E6%8F%92%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/hexo-site/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="没得选喽">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="没得选の小破站">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Flutter插件
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+
+      <time title="创建时间：2021-09-30 10:03:13 / 修改时间：12:14:04" itemprop="dateCreated datePublished" datetime="2021-09-30T10:03:13+08:00">2021-09-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/hexo-site/categories/Flutter/" itemprop="url" rel="index"><span itemprop="name">Flutter</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>176</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>国际站 <a target="_blank" rel="noopener" href="https://pub.dev/">pub.dev</a><br>国内站 <a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/">pub.flutter-io.cn</a></p>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><p>添加插件的方法 <code>flutter pub add packageName</code> 或者修改 <code>pubspec.yaml</code> 后 <code>flutter packages get</code></p>
+<h4 id="flutter-screenutil-屏幕适配插件"><a href="#flutter-screenutil-屏幕适配插件" class="headerlink" title="flutter_screenutil 屏幕适配插件"></a>flutter_screenutil 屏幕适配插件</h4><h4 id="url-launcher-打电话，发邮件，访问-url"><a href="#url-launcher-打电话，发邮件，访问-url" class="headerlink" title="url_launcher 打电话，发邮件，访问 url"></a>url_launcher 打电话，发邮件，访问 url</h4><h4 id="card-swiper-轮播插件"><a href="#card-swiper-轮播插件" class="headerlink" title="card_swiper 轮播插件"></a>card_swiper 轮播插件</h4><h4 id="dio-网络请求"><a href="#dio-网络请求" class="headerlink" title="dio 网络请求"></a>dio 网络请求</h4><h4 id="get-状态管理"><a href="#get-状态管理" class="headerlink" title="get 状态管理"></a>get 状态管理</h4>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-09-30T10:13:34+08:00"
-              content="2021-09-30">
-          09-30
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/hexo-site/2021/09/30/Flutter%E8%9B%8B%E6%92%AD%E6%89%80%E6%9C%89%E6%8F%92%E4%BB%B6/" itemprop="url">
-            <span itemprop="name">Flutter蛋播所有插件</span>
-          </a>
-      </div>
+    <footer class="post-footer"><div>
+    {% if not is_index %}
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    {% endif %}
+</div>
+          <div class="post-tags">
+              <a href="/hexo-site/tags/%E6%8F%92%E4%BB%B6/" rel="tag"># 插件</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/hexo-site/2021/09/30/flutter%E5%9F%BA%E7%A1%80/" rel="prev" title="Flutter基础">
+                  <i class="fa fa-chevron-left"></i> Flutter基础
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/hexo-site/2021/09/30/Flutter%E8%9B%8B%E6%92%AD%E6%89%80%E6%9C%89%E6%8F%92%E4%BB%B6/" rel="next" title="Flutter蛋播所有插件">
+                  Flutter蛋播所有插件 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-09-30T10:03:13+08:00"
-              content="2021-09-30">
-          09-30
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/hexo-site/2021/09/30/flutter%E6%8F%92%E4%BB%B6/" itemprop="url">
-            <span itemprop="name">Flutter插件</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-09-30T09:39:11+08:00"
-              content="2021-09-30">
-          09-30
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/hexo-site/2021/09/30/flutter%E5%9F%BA%E7%A1%80/" itemprop="url">
-            <span itemprop="name">Flutter基础</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
 
 </div>
   </main>
