@@ -4,7 +4,7 @@
 
 # Site
 title: 没得选の小破站
-subtitle: ""
+subtitle: "沉迷学习 无法自拔 学习使我快乐"
 description: ""
 keywords:
 author: 没得选喽
@@ -70,6 +70,10 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+auto_category:
+  enable: true
+  depth:
+
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
@@ -105,3 +109,28 @@ deploy:
   type: git
   repository: https://github.com/weiwei02580/hexo-site.git
   branch: gh-pages
+
+search:
+  path: search.xml # 索引文件的路径，相对于站点根目录
+  field: post # 搜索范围，默认是 post，还可以选择 page、all，设置成 all 表示搜索所有页面
+  format: html
+  limit: 100
+
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
