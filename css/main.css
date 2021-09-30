@@ -102,42 +102,10 @@
   --btn-default-hover-bg: #222;
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
-  --highlight-background: #f0f0f0;
-  --highlight-foreground: #444;
-  --highlight-gutter-background: #dedede;
-  --highlight-gutter-foreground: #555;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --body-bg-color: #282828;
-    --content-bg-color: #333;
-    --card-bg-color: #555;
-    --text-color: #ccc;
-    --blockquote-color: #bbb;
-    --link-color: #ccc;
-    --link-hover-color: #eee;
-    --brand-color: #ddd;
-    --brand-hover-color: #ddd;
-    --table-row-odd-bg-color: #282828;
-    --table-row-hover-bg-color: #363636;
-    --menu-item-bg-color: #555;
-    --btn-default-bg: #222;
-    --btn-default-color: #ccc;
-    --btn-default-border-color: #555;
-    --btn-default-hover-bg: #666;
-    --btn-default-hover-color: #ccc;
-    --btn-default-hover-border-color: #666;
-    --highlight-background: #1d1f21;
-    --highlight-foreground: #c5c8c6;
-    --highlight-gutter-background: #2d2f31;
-    --highlight-gutter-foreground: #b4b7b5;
-  }
-  img {
-    opacity: 0.75;
-  }
-  img:hover {
-    opacity: 0.9;
-  }
+  --highlight-background: #1d1f21;
+  --highlight-foreground: #c5c8c6;
+  --highlight-gutter-background: #2d2f31;
+  --highlight-gutter-foreground: #b4b7b5;
 }
 html {
   line-height: 1.15; /* 1 */
@@ -476,107 +444,6 @@ td {
   top: -5px;
   transform: rotate(-45deg);
 }
-/*
-
-Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
-
-*/
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  background: #F0F0F0;
-}
-
-
-/* Base color: saturation 0; */
-
-.hljs,
-.hljs-subst {
-  color: #444;
-}
-
-.hljs-comment {
-  color: #888888;
-}
-
-.hljs-keyword,
-.hljs-attribute,
-.hljs-selector-tag,
-.hljs-meta-keyword,
-.hljs-doctag,
-.hljs-name {
-  font-weight: bold;
-}
-
-
-/* User color: hue: 0 */
-
-.hljs-type,
-.hljs-string,
-.hljs-number,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-quote,
-.hljs-template-tag,
-.hljs-deletion {
-  color: #880000;
-}
-
-.hljs-title,
-.hljs-section {
-  color: #880000;
-  font-weight: bold;
-}
-
-.hljs-regexp,
-.hljs-symbol,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-link,
-.hljs-selector-attr,
-.hljs-selector-pseudo {
-  color: #BC6060;
-}
-
-
-/* Language color: hue: 90; */
-
-.hljs-literal {
-  color: #78A960;
-}
-
-.hljs-built_in,
-.hljs-bullet,
-.hljs-code,
-.hljs-addition {
-  color: #397300;
-}
-
-
-/* Meta color: hue: 200 */
-
-.hljs-meta {
-  color: #1f7199;
-}
-
-.hljs-meta-string {
-  color: #4d99bf;
-}
-
-
-/* Misc effects */
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
-}
-
-@media (prefers-color-scheme: dark) {
 /* Tomorrow Night Theme */
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
 /* Original theme - https://github.com/chriskempson/tomorrow-theme */
@@ -653,6 +520,41 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   font-weight: bold;
 }
 
+.highlight:hover .copy-btn,
+pre:hover .copy-btn {
+  opacity: 1;
+}
+.copy-btn {
+  color: #333;
+  cursor: pointer;
+  line-height: 1.6;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  transition: opacity 0.2s ease-in-out;
+  color: var(--highlight-foreground);
+  font-size: 14px;
+  right: 0;
+  top: 2px;
+}
+figure.highlight {
+  border-radius: 5px;
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.4);
+  padding-top: 30px;
+}
+figure.highlight .table-container {
+  border-radius: 0 0 5px 5px;
+}
+figure.highlight::before {
+  background: #fc625d;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  left: 12px;
+  margin-top: -20px;
+  position: absolute;
+  border-radius: 50%;
+  content: ' ';
+  height: 12px;
+  width: 12px;
 }
 code,
 kbd,
@@ -1906,10 +1808,6 @@ pre code {
   position: fixed;
   z-index: 1300;
   right: 30px;
-  width: 24px;
-}
-.back-to-top span {
-  display: none;
 }
 @media (max-width: 991px) {
   .back-to-top {
@@ -1929,6 +1827,16 @@ pre code {
 }
 .back-to-top.back-to-top-on {
   bottom: 30px;
+}
+.reading-progress-bar {
+  --progress: 0;
+  background: #37c6c0;
+  height: 3px;
+  position: fixed;
+  z-index: 1500;
+  width: var(--progress);
+  left: 0;
+  top: 0;
 }
 .rtl.post-body p,
 .rtl.post-body a,
@@ -2651,52 +2559,6 @@ ul.breadcrumb li:last-child {
 .tag-cloud-10 {
   border-bottom-color: #111;
   color: #111;
-}
-@media (prefers-color-scheme: dark) {
-  .tag-cloud-0 {
-    border-bottom-color: #555;
-    color: #555;
-  }
-  .tag-cloud-1 {
-    border-bottom-color: #646464;
-    color: #646464;
-  }
-  .tag-cloud-2 {
-    border-bottom-color: #737373;
-    color: #737373;
-  }
-  .tag-cloud-3 {
-    border-bottom-color: #828282;
-    color: #828282;
-  }
-  .tag-cloud-4 {
-    border-bottom-color: #929292;
-    color: #929292;
-  }
-  .tag-cloud-5 {
-    border-bottom-color: #a1a1a1;
-    color: #a1a1a1;
-  }
-  .tag-cloud-6 {
-    border-bottom-color: #b0b0b0;
-    color: #b0b0b0;
-  }
-  .tag-cloud-7 {
-    border-bottom-color: #c0c0c0;
-    color: #c0c0c0;
-  }
-  .tag-cloud-8 {
-    border-bottom-color: #cfcfcf;
-    color: #cfcfcf;
-  }
-  .tag-cloud-9 {
-    border-bottom-color: #dedede;
-    color: #dedede;
-  }
-  .tag-cloud-10 {
-    border-bottom-color: #eee;
-    color: #eee;
-  }
 }
 .search-active {
   overflow: hidden;
