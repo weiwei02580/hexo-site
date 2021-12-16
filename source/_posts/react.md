@@ -1,7 +1,10 @@
 ---
 title: react
-date: 2021-11-15 09:31:45
+date: 2021-12-16 09:31:45
 tags:
+  - learn
+categories:
+  - [react]
 ---
 
 # react

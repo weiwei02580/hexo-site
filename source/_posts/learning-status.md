@@ -1,7 +1,10 @@
 ---
 title: learning-status
-date: 2021-11-15 09:40:08
+date: 2021-12-16 16:04:00
 tags:
+  - learn
+categories:
+  - [统计]
 ---
 
 # JavaScript
