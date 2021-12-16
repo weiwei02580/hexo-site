@@ -23,3 +23,7 @@ categories:
 #### dio 网络请求
 
 #### get 状态管理
+
+#### shared_preferences 本地存储
+
+#### flutter_native_splash 闪屏插件
