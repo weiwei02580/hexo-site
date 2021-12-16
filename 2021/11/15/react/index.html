@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/hexo-site/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/hexo-site/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/hexo-site/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/hexo-site/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/hexo-site/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Lato:300,300italic,400,400italic,700,700italic%7CNoto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"weiwei02580.github.io","root":"/hexo-site/","images":"/hexo-site/images","scheme":"Gemini","darkmode":false,"version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/hexo-site/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/hexo-site/js/config.js"></script>
+<meta name="description" content="reactreact 相关技术栈">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react">
+<meta property="og:url" content="https://weiwei02580.github.io/hexo-site/2021/11/15/react/index.html">
+<meta property="og:site_name" content="没得选の小破站">
+<meta property="og:description" content="reactreact 相关技术栈">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://weiwei02580.github.io/hexo-site/2021/11/15/image/react/redux-1.webp">
+<meta property="og:image" content="https://weiwei02580.github.io/hexo-site/2021/11/15/image/react/redux-2.webp">
+<meta property="og:image" content="https://weiwei02580.github.io/hexo-site/2021/11/15/image/react/redux-3.webp">
+<meta property="og:image" content="https://weiwei02580.github.io/hexo-site/2021/11/15/image/react/redux-4.webp">
+<meta property="og:image" content="https://weiwei02580.github.io/hexo-site/2021/11/15/image/react/redux-5.webp">
+<meta property="og:image" content="https://weiwei02580.github.io/hexo-site/2021/11/15/image/react/redux-6.webp">
+<meta property="og:image" content="https://weiwei02580.github.io/hexo-site/2021/11/15/image/react/redux-7.webp">
+<meta property="og:image" content="https://weiwei02580.github.io/hexo-site/2021/11/15/image/react/redux-8.webp">
+<meta property="article:published_time" content="2021-11-15T01:31:45.000Z">
+<meta property="article:modified_time" content="2021-12-16T07:54:27.305Z">
+<meta property="article:author" content="没得选喽">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weiwei02580.github.io/hexo-site/2021/11/15/image/react/redux-1.webp">
+
+
+<link rel="canonical" href="https://weiwei02580.github.io/hexo-site/2021/11/15/react/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weiwei02580.github.io/hexo-site/2021/11/15/react/","path":"2021/11/15/react/","title":"react"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>react | 没得选の小破站</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/hexo-site/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/hexo-site/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">没得选の小破站</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">沉迷学习 无法自拔 学习使我快乐</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/hexo-site/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/hexo-site/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/hexo-site/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/hexo-site/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#react"><span class="nav-number">1.</span> <span class="nav-text">react</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#create-react-app-%E4%BF%AE%E6%94%B9-webpack"><span class="nav-number">1.1.</span> <span class="nav-text">create-react-app 修改 webpack</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#React-Router"><span class="nav-number">2.</span> <span class="nav-text">React Router</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HashRouter%E3%80%81BrowserRouter"><span class="nav-number">2.1.</span> <span class="nav-text">HashRouter、BrowserRouter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Route-%E7%94%A8%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">Route 用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#V5"><span class="nav-number">2.2.1.</span> <span class="nav-text">V5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#V6"><span class="nav-number">2.2.2.</span> <span class="nav-text">V6</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React-%E6%96%B0%E7%89%B9%E6%80%A7%E7%AE%80%E4%BB%8B%E5%8F%8A-context-%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">2.3.</span> <span class="nav-text">React 新特性简介及 context 的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Context"><span class="nav-number">2.3.1.</span> <span class="nav-text">Context</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ContextType-%E6%B8%B2%E6%9F%93-jsx-%E4%B9%8B%E5%89%8D%E6%8F%90%E5%89%8D%E8%8E%B7%E5%8F%96-Consumer-%E7%9A%84%E5%80%BC"><span class="nav-number">2.3.2.</span> <span class="nav-text">ContextType 渲染 jsx 之前提前获取 Consumer 的值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lazy-%E5%92%8C-Suspense-%E8%BF%90%E8%A1%8C%E6%80%A7%E8%83%BD-api"><span class="nav-number">2.3.3.</span> <span class="nav-text">lazy 和 Suspense 运行性能 api</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#React-Hooks-%E5%88%9D%E5%A7%8B%E5%BA%94%E7%94%A8%E7%89%88%E6%9C%AC-16-8"><span class="nav-number">3.</span> <span class="nav-text">React Hooks 初始应用版本 16.8</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E7%BB%84%E4%BB%B6%E4%B8%8D%E8%B6%B3"><span class="nav-number">3.1.</span> <span class="nav-text">类组件不足</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hooks-%E4%BC%98%E5%8A%BF"><span class="nav-number">3.2.</span> <span class="nav-text">Hooks 优势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#useSate-%E6%95%B0%E6%8D%AE%E7%8A%B6%E6%80%81"><span class="nav-number">3.2.1.</span> <span class="nav-text">useSate 数据状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#useEffect-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0"><span class="nav-number">3.2.2.</span> <span class="nav-text">useEffect 生命周期函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#useContext"><span class="nav-number">3.2.3.</span> <span class="nav-text">useContext</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#useMemo-amp-useCallback"><span class="nav-number">3.2.4.</span> <span class="nav-text">useMemo &amp; useCallback</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#useRef"><span class="nav-number">3.2.5.</span> <span class="nav-text">useRef</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Custom-Hooks-%E8%87%AA%E5%AE%9A%E4%B9%89-Hooks"><span class="nav-number">3.2.6.</span> <span class="nav-text">Custom Hooks 自定义 Hooks</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%B3%95%E5%88%99"><span class="nav-number">3.3.</span> <span class="nav-text">使用法则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PWA"><span class="nav-number">4.</span> <span class="nav-text">PWA</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redux"><span class="nav-number">5.</span> <span class="nav-text">Redux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96"><span class="nav-number">5.1.</span> <span class="nav-text">添加依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="nav-number">5.2.</span> <span class="nav-text">创建项目目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Redux%EF%BC%88%E6%96%87%E4%BB%B6%E5%85%B7%E4%BD%93%E8%B7%AF%E5%BE%84%E8%AF%B7%E7%9C%8B%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%EF%BC%89"><span class="nav-number">5.3.</span> <span class="nav-text">配置 Redux（文件具体路径请看项目目录结构）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1"><span class="nav-number">5.4.</span> <span class="nav-text">配置路由</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#redux-toolkit"><span class="nav-number">6.</span> <span class="nav-text">@redux&#x2F;toolkit</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="没得选喽"
+      src="/hexo-site/images/apple-touch-icon-next.png">
+  <p class="site-author-name" itemprop="name">没得选喽</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/hexo-site/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/hexo-site/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/hexo-site/tags/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/weiwei02580" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;weiwei02580" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/3093268515" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;3093268515" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weiwei02580.github.io/hexo-site/2021/11/15/react/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/hexo-site/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="没得选喽">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="没得选の小破站">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          react
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-11-15 09:31:45" itemprop="dateCreated datePublished" datetime="2021-11-15T09:31:45+08:00">2021-11-15</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-12-16 15:54:27" itemprop="dateModified" datetime="2021-12-16T15:54:27+08:00">2021-12-16</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>14k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>13 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="react"><a href="#react" class="headerlink" title="react"></a>react</h1><p>react 相关技术栈</p>
+<span id="more"></span>
+
+<h2 id="create-react-app-修改-webpack"><a href="#create-react-app-修改-webpack" class="headerlink" title="create-react-app 修改 webpack"></a>create-react-app 修改 webpack</h2><ol>
+<li>安装插件</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add antd babel-plugin-import less less-loader@^7.3.0</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>编写使用 less</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">test</span>: lessRegex,</span><br><span class="line">    <span class="attr">exclude</span>: lessModuleRegex,</span><br><span class="line">    <span class="attr">use</span>: getStyleLoaders(</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">importLoaders</span>: <span class="number">3</span>,</span><br><span class="line">            <span class="attr">sourceMap</span>: isEnvProduction</span><br><span class="line">            ? shouldUseSourceMap</span><br><span class="line">            : isEnvDevelopment,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="string">&#x27;less-loader&#x27;</span>,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">lessOptions</span>: &#123; <span class="attr">javascriptEnabled</span>: <span class="literal">true</span>.valueOf, <span class="attr">modifyVars</span>: &#123; <span class="string">&#x27;@primary-color&#x27;</span>: <span class="string">&#x27;#1DA57A&#x27;</span> &#125; &#125;, <span class="comment">// babel-plugin-import 配置完</span></span><br><span class="line">        &#125;</span><br><span class="line">    ),</span><br><span class="line">    <span class="attr">sideEffects</span>: <span class="literal">true</span>,</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">test</span>: lessModuleRegex,</span><br><span class="line">    <span class="attr">use</span>: getStyleLoaders(</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">importLoaders</span>: <span class="number">3</span>,</span><br><span class="line">        <span class="attr">sourceMap</span>: isEnvProduction</span><br><span class="line">        ? shouldUseSourceMap</span><br><span class="line">        : isEnvDevelopment,</span><br><span class="line">        <span class="attr">modules</span>: &#123;</span><br><span class="line">            <span class="attr">getLocalIdent</span>: getCSSModuleLocalIdent,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&#x27;less-loader&#x27;</span></span><br><span class="line">    ),</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>编写 babel-plugin-import 配置</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.修改getStyleLoaders方法</span></span><br><span class="line">  <span class="keyword">const</span> getStyleLoaders = <span class="function">(<span class="params">cssOptions, preProcessor, preProcessorOptions = &#123;&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// something</span></span><br><span class="line">    <span class="keyword">if</span> (preProcessor) &#123;</span><br><span class="line">      loaders.push(</span><br><span class="line">        <span class="comment">// something</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">loader</span>: <span class="built_in">require</span>.resolve(preProcessor),</span><br><span class="line">          <span class="attr">options</span>: &#123;</span><br><span class="line">            <span class="attr">sourceMap</span>: <span class="literal">true</span>,</span><br><span class="line">            ...preProcessorOptions</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;</span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> loaders;</span><br><span class="line">  &#125;;</span><br><span class="line"><span class="comment">// 2. 修改rules</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">test</span>: <span class="regexp">/\.(js|mjs|jsx|ts|tsx)$/</span>,</span><br><span class="line">        options: &#123;</span><br><span class="line">            <span class="attr">plugins</span>: [</span><br><span class="line">                [<span class="string">&#x27;import&#x27;</span>,</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="attr">libraryName</span>: <span class="string">&#x27;antd&#x27;</span>,</span><br><span class="line">                        <span class="attr">libraryDirectory</span>: <span class="string">&#x27;es&#x27;</span>,</span><br><span class="line">                        <span class="attr">style</span>: <span class="literal">true</span></span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            ].filter(<span class="built_in">Boolean</span>),</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="React-Router"><a href="#React-Router" class="headerlink" title="React Router"></a>React Router</h1><h2 id="HashRouter、BrowserRouter"><a href="#HashRouter、BrowserRouter" class="headerlink" title="HashRouter、BrowserRouter"></a>HashRouter、BrowserRouter</h2><h2 id="Route-用法"><a href="#Route-用法" class="headerlink" title="Route 用法"></a>Route 用法</h2><h3 id="V5"><a href="#V5" class="headerlink" title="V5"></a>V5</h3><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;Route path=<span class="string">&#x27;/admin/ui/buttons&#x27;</span> component=&#123;Buttons&#125; /&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&#x27;/admin/ui/modals&#x27;</span> <span class="attr">component</span>=<span class="string">&#123;Modals&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&#x27;/admin&#x27;</span> <span class="attr">render</span>=<span class="string">&#123;()</span>=&gt;</span>&#123;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Admin</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&#x27;/admin/home&#x27;</span> <span class="attr">component</span>=<span class="string">&#123;Home&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">Admin</span>&gt;</span></span></span><br><span class="line"><span class="xml">&#125;&#125; /&gt;</span></span><br><span class="line"><span class="comment">// Link</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">&#x27;/&#x27;</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">&#123;&#123;pathname:</span>&#x27;/<span class="attr">three</span>/<span class="attr">7</span>&#x27;&#125;&#125;&gt;</span>Three #7<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br><span class="line"><span class="comment">// 定义 &lt;Route path=&#x27;/three/:number&#x27; /&gt; 取值：this.prosp.match.params.number</span></span><br><span class="line"><span class="comment">// Switch 精准匹配第一个</span></span><br><span class="line"><span class="comment">// exact 完全匹配</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Switch</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&#x27;/admin/ui/buttons&#x27;</span> <span class="attr">component</span>=<span class="string">&#123;Buttons&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Route</span> <span class="attr">exact</span> <span class="attr">path</span>=<span class="string">&#x27;/admin/ui/modals&#x27;</span> <span class="attr">component</span>=<span class="string">&#123;Modals&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Route</span> <span class="attr">component</span>=<span class="string">&#123;noMatch&#125;</span> /&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">Switch</span>&gt;</span></span></span><br><span class="line"><span class="comment">// Redirect</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">Redirect</span> <span class="attr">to</span>=<span class="string">&#x27;/admin/home&#x27;</span> /&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="V6"><a href="#V6" class="headerlink" title="V6"></a>V6</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40906515/article/details/104957712">React-Router v6 新特性解读及迁移指南</a></p>
+<h2 id="React-新特性简介及-context-的使用"><a href="#React-新特性简介及-context-的使用" class="headerlink" title="React 新特性简介及 context 的使用"></a>React 新特性简介及 context 的使用</h2><ul>
+<li>Context</li>
+<li>ContextType</li>
+<li>lazy/Suspense</li>
+<li>memo</li>
+</ul>
+<h3 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h3><p><code>&lt;Provider&gt;</code> <code>&lt;Consumer&gt;</code> 多个 Context 嵌套使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Component, createContext &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> BatteryContext = createContext();</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">BatteryContext.Provider</span> <span class="attr">value</span>=<span class="string">&#123;60&#125;</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">Middle</span> /&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">BatteryContext.Provider</span>&gt;</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Middle</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">Leaf</span> /&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="xml"><span class="tag">&lt;<span class="name">BatteryContext.Consumer</span>&gt;</span></span></span><br><span class="line"><span class="xml">        &#123;(battery) =&gt; <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Battery:&#123;battery&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>&#125;</span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">BatteryContext.Consumer</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ContextType-渲染-jsx-之前提前获取-Consumer-的值"><a href="#ContextType-渲染-jsx-之前提前获取-Consumer-的值" class="headerlink" title="ContextType 渲染 jsx 之前提前获取 Consumer 的值"></a>ContextType 渲染 jsx 之前提前获取 Consumer 的值</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> BatteryContext = createContext();</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> contextType = BatteryContext; <span class="comment">// 静态属性赋值</span></span><br><span class="line">  <span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> battery = <span class="built_in">this</span>.context; <span class="comment">// 会自动生成context属性，值就是provider的值</span></span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Battery:&#123;battery&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="lazy-和-Suspense-运行性能-api"><a href="#lazy-和-Suspense-运行性能-api" class="headerlink" title="lazy 和 Suspense 运行性能 api"></a>lazy 和 Suspense 运行性能 api</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; lazy, Suspense &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>; <span class="comment">// Suspense异步渲染空挡显示</span></span><br><span class="line"><span class="keyword">const</span> About = lazy(<span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: &quot;about&quot; */</span> <span class="string">&quot;./About.jsx&quot;</span>));</span><br><span class="line"><span class="comment">// ErrorBoundary 错误边界，当About加载失败的时候</span></span><br><span class="line"><span class="comment">// componentDidCatch</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">        hasError=<span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">componentDidCatch</span>(<span class="params"></span>)</span> &#123; <span class="comment">// 原始写法</span></span><br><span class="line">        <span class="built_in">this</span>.setState(&#123;</span><br><span class="line">            <span class="attr">hasError</span>:<span class="literal">true</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="keyword">static</span> <span class="function"><span class="title">getDerivedStateFromError</span>(<span class="params"></span>)</span>&#123; <span class="comment">// 精简写法，发现错误直接将返回值合并到state</span></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">hassError</span>:<span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(<span class="built_in">this</span>.state.hasError)&#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>error<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">Suspense</span> <span class="attr">fallback</span>=<span class="string">&#123;</span>&lt;<span class="attr">div</span>&gt;</span>loading<span class="tag">&lt;/<span class="name">div</span>&gt;</span>&#125;&gt;</span></span><br><span class="line"><span class="xml">          <span class="tag">&lt;<span class="name">About</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">Suspense</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="React-Hooks-初始应用版本-16-8"><a href="#React-Hooks-初始应用版本-16-8" class="headerlink" title="React Hooks 初始应用版本 16.8"></a>React Hooks 初始应用版本 16.8</h1><blockquote>
+<p>类组件、函数组件<br>类组件复用 渲染属性、高阶组件</p>
+</blockquote>
+<h2 id="类组件不足"><a href="#类组件不足" class="headerlink" title="类组件不足"></a>类组件不足</h2><ol>
+<li>缺少复用机制</li>
+<li>渲染属性和高阶组件导致层级冗余</li>
+<li>生命周期函数混杂不相干逻辑</li>
+<li>相关逻辑分散在不同生命周期</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 渲染属性</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Resizeable</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  state = &#123;</span><br><span class="line">    <span class="attr">size</span>: [<span class="built_in">window</span>.innerWidth, <span class="built_in">window</span>, innerHeight],</span><br><span class="line">  &#125;;</span><br><span class="line">  onResize = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.setState(&#123;</span><br><span class="line">      <span class="attr">size</span>: [<span class="built_in">window</span>.innerWidth, <span class="built_in">window</span>, innerHeight],</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="function"><span class="title">componentDidMount</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">&quot;resize&quot;</span>, <span class="built_in">this</span>.onResize);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="title">componentWillUnMount</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">window</span>.removeEventListener(<span class="string">&quot;resize&quot;</span>, <span class="built_in">this</span>.onResize);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.props.render(<span class="built_in">this</span>.props.size);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> [width, height] = <span class="built_in">this</span>.props.size;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        &#123;width&#125;*&#123;height&#125;</span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;Resizeable render=&#123;<span class="function">(<span class="params">size</span>) =&gt;</span> <span class="xml"><span class="tag">&lt;<span class="name">Foo</span> <span class="attr">size</span>=<span class="string">&#123;size&#125;</span> /&gt;</span></span>&#125; /&gt;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 高阶组件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">resizeable</span>(<span class="params">Child</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="class"><span class="keyword">class</span> <span class="title">Wrapper</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    state = &#123;</span><br><span class="line">      <span class="attr">size</span>: [<span class="built_in">window</span>.innerWidth, <span class="built_in">window</span>, innerHeight],</span><br><span class="line">    &#125;;</span><br><span class="line">    onResize = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.setState(&#123;</span><br><span class="line">        <span class="attr">size</span>: [<span class="built_in">window</span>.innerWidth, <span class="built_in">window</span>, innerHeight],</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="function"><span class="title">componentDidMount</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      <span class="built_in">window</span>.addEventListener(<span class="string">&quot;resize&quot;</span>, <span class="built_in">this</span>.onResize);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">componentWillUnMount</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">      <span class="built_in">window</span>.removeEventListener(<span class="string">&quot;resize&quot;</span>, <span class="built_in">this</span>.onResize);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> size=<span class="built_in">this</span>.props.zise</span><br><span class="line">      <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">Child</span> <span class="attr">size</span>=<span class="string">&#123;size&#125;</span> /&gt;</span></span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">render</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> [width, height] = <span class="built_in">this</span>.props.size;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        &#123;width&#125;*&#123;height&#125;</span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> WrapperedFoo = resizeable(Foo)</span><br><span class="line">&lt;WrapperedFoo /&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hooks-优势"><a href="#Hooks-优势" class="headerlink" title="Hooks 优势"></a>Hooks 优势</h2><ol>
+<li>函数组件无 this 问题</li>
+<li>自定义 Hook 方便复用状态逻辑</li>
+<li>副作用的关注点分离</li>
+</ol>
+<h3 id="useSate-数据状态"><a href="#useSate-数据状态" class="headerlink" title="useSate 数据状态"></a>useSate 数据状态</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = useState(<span class="function">() =&gt;</span> props.defaultCount || <span class="number">0</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> setCount(count + 1)&#125;&gt;Click&#123;count&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="useEffect-生命周期函数"><a href="#useEffect-生命周期函数" class="headerlink" title="useEffect 生命周期函数"></a>useEffect 生命周期函数</h3><ol>
+<li>第二个参数，不传数组，每次都执行</li>
+<li>空数组，每次都相同只执行一次</li>
+<li>数组每一项都不变，useEfect 才不会执行</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = useState(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> [size, setSize] = useState(&#123;</span><br><span class="line">    <span class="attr">width</span>: <span class="built_in">document</span>.docmentElement.clientWidth,</span><br><span class="line">    <span class="attr">height</span>: <span class="built_in">document</span>.docmentElement.clientHeight,</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">const</span> onResize = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setSize(&#123;</span><br><span class="line">      <span class="attr">width</span>: <span class="built_in">document</span>.docmentElement.clientWidth,</span><br><span class="line">      <span class="attr">height</span>: <span class="built_in">document</span>.docmentElement.clientHeight,</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">  useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">document</span>.title = count;</span><br><span class="line">  &#125;);</span><br><span class="line">  useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">&quot;resize&quot;</span>, onResize, <span class="literal">false</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">window</span>.removeEventListener(<span class="string">&quot;resize&quot;</span>, onResize, <span class="literal">false</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;, []);</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="xml">      size: &#123;size.width&#125; x &#123;size.height&#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="useContext"><a href="#useContext" class="headerlink" title="useContext"></a>useContext</h3><p>函数组件使用 context 简单方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useContext, createContext &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> CountContext = createContext();</span><br><span class="line"><span class="keyword">const</span> count = useContext(CountContext);</span><br></pre></td></tr></table></figure>
+
+<h3 id="useMemo-amp-useCallback"><a href="#useMemo-amp-useCallback" class="headerlink" title="useMemo &amp; useCallback"></a>useMemo &amp; useCallback</h3><ol>
+<li>mome 优化组件重新渲染的行为，类似于 PureComponent</li>
+<li>useMemo 一段函数是否重复执行</li>
+<li>与 useEffect 的区别，useEffect 渲染完成后执行，useMemo 渲染期间完成有返回值</li>
+<li>useMemo(()=&gt;fn) === useCallback(fn)</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [count, setCount] = useState(<span class="number">0</span>);</span><br><span class="line"><span class="keyword">const</span> double = useMemo(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> count * <span class="number">2</span>;</span><br><span class="line">&#125;, [count === <span class="number">3</span>]); <span class="comment">// 值变化三次，所以double，为0，6，8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Counter = memo(<span class="function"><span class="keyword">function</span> <span class="title">Counter</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;Counter render&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">onClick</span>=<span class="string">&#123;props.onClick&#125;</span>&gt;</span>&#123;props.count&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">const</span> onClick = useMemo(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;click&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,[])</span><br><span class="line"><span class="keyword">const</span> onClick = useCallback(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;click&#x27;</span>)</span><br><span class="line">&#125;,[])</span><br><span class="line"></span><br><span class="line">&lt;Counter count=&#123;double&#125; onClick=&#123;onClick&#125; /&gt;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="useRef"><a href="#useRef" class="headerlink" title="useRef"></a>useRef</h3><blockquote>
+<p>特性</p>
+</blockquote>
+<ol>
+<li>获取 dom 时，只能使用在类组件上</li>
+<li>函数组件不能完全替代类组件</li>
+</ol>
+<blockquote>
+<p>作用</p>
+</blockquote>
+<ol>
+<li>获取 dom</li>
+<li>同步不同渲染周期之间的数据</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useRef, useEffect &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> counterRef = useRef();</span><br><span class="line">  <span class="keyword">const</span> it = useRef();</span><br><span class="line"></span><br><span class="line">  useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    it.current = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      setCount(<span class="function">(<span class="params">count</span>) =&gt;</span> count + <span class="number">1</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;, []);</span><br><span class="line">  useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (count &gt;= <span class="number">10</span>) &#123;</span><br><span class="line">      <span class="built_in">clearInterval</span>(it.current);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">Counter</span> <span class="attr">ref</span>=<span class="string">&#123;counterRef&#125;</span>&gt;</span><span class="tag">&lt;/<span class="name">Counter</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Custom-Hooks-自定义-Hooks"><a href="#Custom-Hooks-自定义-Hooks" class="headerlink" title="Custom Hooks 自定义 Hooks"></a>Custom Hooks 自定义 Hooks</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useState, useRef, useEffect &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">useCounter</span>(<span class="params">count</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;count&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">useCount</span>(<span class="params">defaultCount</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = useState(defaultCount);</span><br><span class="line">  <span class="keyword">const</span> it = useRef();</span><br><span class="line"></span><br><span class="line">  useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    it.current = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      setCount(<span class="function">(<span class="params">count</span>) =&gt;</span> count + <span class="number">1</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">  &#125;, []);</span><br><span class="line">  useEffect(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (count &gt;= <span class="number">10</span>) &#123;</span><br><span class="line">      <span class="built_in">clearInterval</span>(it.current);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> [count, setCount];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [count, setCount] = useCount(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> Counter = useCounter(count);</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;Counter&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用法则"><a href="#使用法则" class="headerlink" title="使用法则"></a>使用法则</h2><ol>
+<li>顶层使用</li>
+<li>只在函数组件或自定义 hooks 中调用 hooks 函数</li>
+</ol>
+<h1 id="PWA"><a href="#PWA" class="headerlink" title="PWA"></a>PWA</h1><blockquote>
+<p>service worker</p>
+</blockquote>
+<p>服务工作线程</p>
+<ol>
+<li>常驻内存运行</li>
+<li>代理网络请求</li>
+<li>依赖 https</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注册</span></span><br><span class="line">navigator.serviceWorker.register(<span class="string">&quot;./sw.js&quot;</span>, &#123; <span class="attr">scope</span>: <span class="string">&quot;/&quot;</span> &#125;).then(</span><br><span class="line">  <span class="function">(<span class="params">registration</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(registration);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function">(<span class="params">err</span>) =&gt;</span> <span class="built_in">console</span>.log(err)</span><br><span class="line">);</span><br><span class="line"><span class="comment">// sw.js</span></span><br><span class="line">self.addEventListener(<span class="string">&quot;install&quot;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;install&quot;</span>, event);</span><br><span class="line">  event.waitUntil(self.skipWaiting()); <span class="comment">// 安装并激活新的sw</span></span><br><span class="line">&#125;);</span><br><span class="line">self.addEventListener(<span class="string">&quot;activate&quot;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;activate&quot;</span>, event);</span><br><span class="line">  event.waitUntil(self.clients.claim()); <span class="comment">// 使网站受到sw的控制</span></span><br><span class="line">&#125;);</span><br><span class="line">self.addEventListener(<span class="string">&quot;fetch&quot;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;fetch&quot;</span>, event);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>web worker</p>
+</blockquote>
+<blockquote>
+<p>fetch</p>
+</blockquote>
+<blockquote>
+<p>Cache API</p>
+</blockquote>
+<blockquote>
+<p>Notification API</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通知权限状态</span></span><br><span class="line">Notification.permission;</span><br><span class="line"><span class="comment">// 请求权限 必须在页面上下文中</span></span><br><span class="line">Notification.requestPermission().then(<span class="function">(<span class="params">permission</span>) =&gt;</span> <span class="built_in">console</span>.log(permission));</span><br><span class="line"><span class="comment">// 发出通知 web</span></span><br><span class="line"><span class="keyword">new</span> Notification(<span class="string">&quot;hello notification&quot;</span>, &#123; <span class="attr">body</span>: <span class="string">&quot;this is from console&quot;</span> &#125;);</span><br><span class="line"><span class="comment">// 发出通知 sw</span></span><br><span class="line">self.registration.showNotification(<span class="string">&quot;hello notification&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">body</span>: <span class="string">&quot;this is from sw&quot;</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><code>workbox</code> 集成化的 PWA</p>
+<h1 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h1><h2 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h2><ol>
+<li>yarn add redux react-redux redux-thunk react-router-dom<br>// redux-thunk 让 action 可以返回函数的中间件</li>
+<li>yarn add redux-logger –dev<br>//辅助 redux，可在打印中看到 redux 一切行为和数据</li>
+</ol>
+<h2 id="创建项目目录结构"><a href="#创建项目目录结构" class="headerlink" title="创建项目目录结构"></a>创建项目目录结构</h2><p><img src="../image/react/redux-1.webp" alt="目录结构图"></p>
+<h2 id="配置-Redux（文件具体路径请看项目目录结构）"><a href="#配置-Redux（文件具体路径请看项目目录结构）" class="headerlink" title="配置 Redux（文件具体路径请看项目目录结构）"></a>配置 Redux（<font color=#ff0000>文件具体路径请看项目目录结构</font>）</h2><ol>
+<li><p>actionTypes 公用属性<br><img src="../image/react/redux-2.webp" alt="actionTypes 公用 type 属性"></p>
+</li>
+<li><p>添加一个 action<br><img src="../image/react/redux-3.webp" alt="action 行为"></p>
+</li>
+<li><p>写入与 action 对应的 reducer<br><img src="../image/react/redux-4.webp" alt="处理 action 传来的信息"></p>
+</li>
+<li><p>合并 reducer ，便于处理 reducer 过多导致的麻烦<br><img src="../image/react/redux-5.webp" alt="合并 Reducer"></p>
+</li>
+<li><p>配置 store<br><img src="../image/react/redux-6.webp" alt="配置 store"></p>
+</li>
+<li><p>将 store 写入启动程序中<br><img src="../image/react/redux-7.webp" alt="添加 store 进根目录 index.js 中"></p>
+</li>
+</ol>
+<h2 id="配置路由"><a href="#配置路由" class="headerlink" title="配置路由"></a>配置路由</h2><p><img src="../image/react/redux-8.webp" alt="配置路由，并且尝试使用redux"></p>
+<h1 id="redux-toolkit"><a href="#redux-toolkit" class="headerlink" title="@redux/toolkit"></a>@redux/toolkit</h1><ol>
+<li>初始化 store.js</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// store.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; configureStore &#125; <span class="keyword">from</span> <span class="string">&quot;@reduxjs/toolkit&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> counterReducer <span class="keyword">from</span> <span class="string">&quot;../features/counter/counterSlice&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> store = configureStore(&#123;</span><br><span class="line">  <span class="attr">reducer</span>: &#123;</span><br><span class="line">    <span class="attr">counter</span>: counterReducer,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>编写 reducer 切片</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// counterSlice.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; createAsyncThunk, createSlice &#125; <span class="keyword">from</span> <span class="string">&quot;@reduxjs/toolkit&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; fetchCount &#125; <span class="keyword">from</span> <span class="string">&quot;./counterAPI&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 默认State</span></span><br><span class="line"><span class="keyword">const</span> initialState = &#123;</span><br><span class="line">  <span class="attr">value</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="attr">status</span>: <span class="string">&quot;idle&quot;</span>, <span class="comment">// 异步状态</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 异步action</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> incrementAsync = createAsyncThunk(</span><br><span class="line">  <span class="string">&quot;counter/fetchCount&quot;</span>,</span><br><span class="line">  <span class="keyword">async</span> (amount) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> response = <span class="keyword">await</span> fetchCount(amount);</span><br><span class="line">    <span class="keyword">return</span> response.data;</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建切片</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> counterSlice = createSlice(&#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;counter&quot;</span>,</span><br><span class="line">  initialState,</span><br><span class="line">  <span class="attr">reducers</span>: &#123;</span><br><span class="line">    <span class="comment">// 同步</span></span><br><span class="line">    <span class="attr">increment</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</span><br><span class="line">      state.value += <span class="number">1</span>;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">decrement</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</span><br><span class="line">      state.value -= <span class="number">1</span>;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">incrementByAmount</span>: <span class="function">(<span class="params">state, action</span>) =&gt;</span> &#123;</span><br><span class="line">      state.value += action.payload;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">extraReducers</span>: <span class="function">(<span class="params">builder</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 异步</span></span><br><span class="line">    builder</span><br><span class="line">      .addCase(incrementAsync.pending, <span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</span><br><span class="line">        state.status = <span class="string">&quot;loading&quot;</span>;</span><br><span class="line">      &#125;)</span><br><span class="line">      .addCase(incrementAsync.fulfilled, <span class="function">(<span class="params">state, action</span>) =&gt;</span> &#123;</span><br><span class="line">        state.status = <span class="string">&quot;idle&quot;</span>;</span><br><span class="line">        state.value += action.payload;</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 暴露actions</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> &#123; increment, decrement, incrementByAmount &#125; = counterSlice.actions;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 暴露state</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> selectCount = <span class="function">(<span class="params">state</span>) =&gt;</span> state.counter.value;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 同步方法</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> incrementIfOdd = <span class="function">(<span class="params">amount</span>) =&gt;</span> <span class="function">(<span class="params">dispatch, getState</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> currentValue = selectCount(getState());</span><br><span class="line">  <span class="keyword">if</span> (currentValue % <span class="number">2</span> === <span class="number">1</span>) &#123;</span><br><span class="line">    dispatch(incrementByAmount(amount));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> counterSlice.reducer;</span><br><span class="line"></span><br><span class="line"><span class="comment">// counterAPI.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">fetchCount</span>(<span class="params">amount = <span class="number">1</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span></span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> resolve(&#123; <span class="attr">data</span>: amount &#125;), <span class="number">500</span>)</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>使用</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">&quot;react-dom&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;./index.css&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&quot;./App&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; store &#125; <span class="keyword">from</span> <span class="string">&quot;./app/store&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">&quot;react-redux&quot;</span>;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">React.StrictMode</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Provider</span> <span class="attr">store</span>=<span class="string">&#123;store&#125;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">App</span> /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">Provider</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">React.StrictMode</span>&gt;</span></span>,</span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">&quot;root&quot;</span>)</span><br><span class="line">);</span><br><span class="line"><span class="comment">// Counter.js</span></span><br><span class="line"><span class="keyword">import</span> React, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; useSelector, useDispatch &#125; <span class="keyword">from</span> <span class="string">&quot;react-redux&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">  decrement,</span><br><span class="line">  increment,</span><br><span class="line">  incrementByAmount,</span><br><span class="line">  incrementAsync,</span><br><span class="line">  incrementIfOdd,</span><br><span class="line">  selectCount,</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">&quot;./counterSlice&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> styles <span class="keyword">from</span> <span class="string">&quot;./Counter.module.css&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">Counter</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> count = useSelector(selectCount);</span><br><span class="line">  <span class="keyword">const</span> dispatch = useDispatch();</span><br><span class="line">  <span class="keyword">const</span> [incrementAmount, setIncrementAmount] = useState(<span class="string">&quot;2&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> incrementValue = <span class="built_in">Number</span>(incrementAmount) || <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#123;styles.row&#125;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">button</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">className</span>=<span class="string">&#123;styles.button&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">aria-label</span>=<span class="string">&quot;Decrement value&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> dispatch(decrement())&#125;</span></span><br><span class="line"><span class="xml">        &gt;</span></span><br><span class="line"><span class="xml">          -</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">className</span>=<span class="string">&#123;styles.value&#125;</span>&gt;</span>&#123;count&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">button</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">className</span>=<span class="string">&#123;styles.button&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">aria-label</span>=<span class="string">&quot;Increment value&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> dispatch(increment())&#125;</span></span><br><span class="line"><span class="xml">        &gt;</span></span><br><span class="line"><span class="xml">          +</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#123;styles.row&#125;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">input</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">className</span>=<span class="string">&#123;styles.textbox&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">aria-label</span>=<span class="string">&quot;Set increment amount&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">value</span>=<span class="string">&#123;incrementAmount&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">onChange</span>=<span class="string">&#123;(e)</span> =&gt;</span> setIncrementAmount(e.target.value)&#125;</span></span><br><span class="line"><span class="xml">        /&gt;</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">button</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">className</span>=<span class="string">&#123;styles.button&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> dispatch(incrementByAmount(incrementValue))&#125;</span></span><br><span class="line"><span class="xml">        &gt;</span></span><br><span class="line"><span class="xml">          Add Amount</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">button</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">className</span>=<span class="string">&#123;styles.asyncButton&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> dispatch(incrementAsync(incrementValue))&#125;</span></span><br><span class="line"><span class="xml">        &gt;</span></span><br><span class="line"><span class="xml">          Add Async</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">button</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">className</span>=<span class="string">&#123;styles.button&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">onClick</span>=<span class="string">&#123;()</span> =&gt;</span> dispatch(incrementIfOdd(incrementValue))&#125;</span></span><br><span class="line"><span class="xml">        &gt;</span></span><br><span class="line"><span class="xml">          Add If Odd</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/hexo-site/2021/09/30/Flutter%E8%9B%8B%E6%92%AD%E6%89%80%E6%9C%89%E6%8F%92%E4%BB%B6/" rel="prev" title="Flutter蛋播所有插件">
+                  <i class="fa fa-chevron-left"></i> Flutter蛋播所有插件
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/hexo-site/2021/11/15/learning-status/" rel="next" title="learning-status">
+                  learning-status <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">没得选喽</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">17k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">16 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="//cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="/hexo-site/js/comments.js"></script><script src="/hexo-site/js/utils.js"></script><script src="/hexo-site/js/motion.js"></script><script src="/hexo-site/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/hexo-site/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/hexo-site/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+  <script async src="//cdn.jsdelivr.net/gh/zxiaosi/cdn/Hexo/js/fireworks.js"></script>
+
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+  <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+  <script async src="//cdn.jsdelivr.net/gh/zxiaosi/cdn/Hexo/js/explosion.js"></script>
+
+  <script async src="//cdn.jsdelivr.net/gh/zxiaosi/cdn/Hexo/js/love.js"></script>
+
+</body>
+</html>
