@@ -95,6 +95,8 @@ yarn add antd babel-plugin-import less less-loader@^7.3.0
     }
 ```
 
+## [从零创建 react-typescript by craco](https://www.jianshu.com/p/931ef818b753)
+
 # React Router
 
 ## HashRouter、BrowserRouter
@@ -426,6 +428,30 @@ function App(props) {
 }
 ```
 
+### useReducer
+
+```js
+const initState = {
+  isLogin: false,
+  user: {
+    id: "100",
+    name: "john",
+  },
+};
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "LOGIN":
+      return {
+        ...state,
+        isLogin: action.payload,
+      };
+    default:
+      break;
+  }
+};
+const [state, dispath] = useReducer(reducer, initState);
+```
+
 ### Custom Hooks 自定义 Hooks
 
 ```js
@@ -555,6 +581,8 @@ self.registration.showNotification("hello notification", {
 
 ![配置路由，并且尝试使用redux](../image/react/redux-8.webp)
 
+# think-react-store
+
 # @redux/toolkit
 
 1. 初始化 store.js
@@ -636,6 +664,7 @@ export const incrementIfOdd = (amount) => (dispatch, getState) => {
   }
 };
 
+// 将reducer暴露出去
 export default counterSlice.reducer;
 
 // counterAPI.js
@@ -734,3 +763,35 @@ export function Counter() {
   );
 }
 ```
+
+# prop-types props 参数定义
+
+```jsx
+import PropTypes from "prop-types";
+function Header(props){
+  const {onBack,onBack} = props
+  return()
+}
+// 写在类外
+Header.propTypes = {
+  onBack: PropTypes.func.isRequired,
+  onBack: PropTypes.string.isRequired,
+}
+// 写在类里面
+static defaultProps = {
+  name: 'strName'
+}
+static propTypes = {
+  name: PropTypes.string
+}
+```
+
+# classnames 转化 classname 判断条件为字符串
+
+```jsx
+import classnames from "classnames";
+
+<div className={classnames("city-selector", { hidden: !show })}></div>;
+```
+
+# styled-components

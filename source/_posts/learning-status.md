@@ -13,7 +13,7 @@ categories:
 
 ## Vue
 
-- Vue3+ElementPlus+Koa2 全栈开发后台系统 -> 7-9
+- Vue3+ElementPlus+Koa2+Mongodb 全栈开发后台系统 -> 7-9
 - Vue2.5 实战微信读书 媲美原生 App 的企业级 web 书城
 - 全网稀缺 Vue 2.0 高级实战 独立开发专属音乐 WebAPP
 
@@ -46,6 +46,9 @@ console.log("opts=>", options);
 ## TypeScript
 
 - 系统入门到项目实战 趁早学习提高职场竞争力 -> 4-8
+- Vue3.0+TS 打造企业级组件库 前端中高级开发者必修课
+- React+TypeScript 高仿 AntDesign 开发企业级 UI 组件库
+- 前端下一代开发语言 TypeScript 从基础到 axios 实战
 
 ---
 
@@ -136,7 +139,7 @@ ndk.dir=C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\ndk-bundle
 
 进度：04-13
 
-> 已学完
+# 已学完
 
 - 数据可视化
 - Vue 全家桶+SSR+Koa2 全栈开发美团网
@@ -145,5 +148,5 @@ ndk.dir=C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\ndk-bundle
 
 # 感兴趣
 
-- 量化交易
 - three.js
+- 量化交易
